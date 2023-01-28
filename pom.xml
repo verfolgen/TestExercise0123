@@ -55,11 +55,6 @@
             <version>${lombok-mapstruct-binding.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.liquibase</groupId>
-            <artifactId>liquibase-core</artifactId>
-            <version>${liquibase.version}</version>
-        </dependency>
-        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-validation</artifactId>
         </dependency>
@@ -107,7 +102,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>2.7.0</version>
                 <configuration>
-                    <mainClass>org.sbitnev.org.sbitnev.part2.MainApplication</mainClass>
+                    <mainClass>org.sbitnev.org.sbitnev.MainApplication</mainClass>
                 </configuration>
                 <executions>
                     <execution>

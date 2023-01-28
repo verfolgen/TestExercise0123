@@ -1,4 +1,4 @@
-package org.sbitnev.part2;
+package org.sbitnev;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
