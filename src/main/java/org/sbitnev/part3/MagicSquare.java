@@ -15,6 +15,7 @@ public class MagicSquare {
             for(int j = 0; j <3; j ++) {
                 System.out.println("Enter number " + "[" + i + "]" + " [" + j + "]");
                 magicArray [i] [j] = sc.nextInt();
+
             }
         }
 
