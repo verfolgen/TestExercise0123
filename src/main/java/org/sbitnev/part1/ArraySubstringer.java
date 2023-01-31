@@ -10,7 +10,6 @@ import java.util.regex.Pattern;
 
 @Service
 public class ArraySubstringer {
-
     public static String [] arraySubstringContains(String [] a1, String [] a2) {
         List<String> arrayList = new ArrayList<>();
         for(int i = 0; i < a1.length; i ++) {
