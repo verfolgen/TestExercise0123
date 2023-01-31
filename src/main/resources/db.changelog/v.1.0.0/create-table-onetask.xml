@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+
+    <changeSet id="create-table-onetask" author="Evgeny S">
+        <preConditions>
+            <not>
+                <tableExists tableName="one_task"/>
+            </not>
+        </preConditions>
+
+        <comment>Add one_task table</comment>
+
+        <createTable tableName="one_task" remarks="List one_tasks">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="array1" type="VARCHAR(250)"/>
+            <column name="array2" type="VARCHAR(250)"/>
+            <column name="number" type="INTEGER"/>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>
