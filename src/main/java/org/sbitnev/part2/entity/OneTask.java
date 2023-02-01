@@ -1,15 +1,16 @@
 package org.sbitnev.part2.entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.time.LocalDate;
 
 @Entity
 @Table(name = "one_task")
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
 public class OneTask {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,6 +24,4 @@ public class OneTask {
 
     @Column(name = "number")
     private int number;
-
-
 }

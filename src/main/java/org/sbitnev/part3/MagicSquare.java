@@ -7,12 +7,6 @@ import java.util.Scanner;
 @Service
 public class MagicSquare {
 
-
-    public static int magicSquarerTransform(int[][] initialArray) {
-
-        final int magicConst = 15;
-        return magicConst;
-    }
     static int[] formingMagicSquare(int [][] s, int [][] squares){
         int min = Integer.MAX_VALUE;
         int[] val = new int[2];
@@ -32,7 +26,9 @@ public class MagicSquare {
 
     private static final Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
+        // init massiv
         int[][] s = new int[3][3];
+        //semi magis sq
         int[][] squares = new int[][]{
                 {1, 5, 9, 6, 7, 2, 8, 3, 4},
                 {1, 5, 9, 8, 3, 4, 6, 7, 2},
@@ -47,6 +43,7 @@ public class MagicSquare {
         int coin;
         int k;
 
+        //read massiv and to int
         for (int i = 0; i < 3; i++) {
             String[] sRowItems = scanner.nextLine().split(" ");
 
@@ -55,11 +52,13 @@ public class MagicSquare {
                 s[i][j] = sItem;
             }
         }
+
         val = formingMagicSquare(s, squares);
         k = val[0];
         coin = val[1];
         System.out.println(coin);
 
+        //out final semimagic sq
         for (int j = 0; j < 9; j++) {
             System.out.print(squares[k][j] + " ");
             if ((j == 2) || (j == 5)) {

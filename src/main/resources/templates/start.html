@@ -12,10 +12,12 @@
         <input  id="initialArray" type="text" name="initialArray">
 
         <label for="array">Second Array</label>
-        <input id="array" type="text" name="array">
+        <input  id="array" type="text" name="array">
 
         <input type="submit" value="Calculate">
         <input type="submit" value="Save" formaction="/save_one">
+        <input type="submit" value="Export" formaction="/export_one" formmethod="get">
+        <input type="submit" value="Download" formaction="/download_one" formmethod="get">
     </form>
     <ul th:each="n : ${resultArray}">
         <li th:text = "${n}"></li>
@@ -26,7 +28,7 @@
     <h1>Third task</h1>
     <form action="/calculate_three" method="post">
         <label for="one">1</label>
-        <input  id="one" type="text" name="one" size="1">
+        <input   id="one" type="text" name="one" size="1">
 
         <label for="two">2</label>
         <input  id="two" type="text" name="two" size="1">
@@ -57,7 +59,29 @@
         <input  id="nine" type="text" name="nine" size="1">
 
         <input type="submit" value="Calculate">
+        <input type="submit" value="Save" formaction="/save_three">
+        <input type="submit" value="Export" formaction="/export_three" formmethod="get">
+        <input type="submit" value="Download" formaction="/download_three" formmethod="get">
     </form>
+
+    <br>
+
+    <tr th:each="thirdTask: ${thirdTasks}">
+        <td th:text = "Cost-"></td>
+        <td th:text="${{thirdTask.cost}}" />
+    </tr>
+
+    <br>
+
+    <tr th:each="magicArray: ${magicArrays}">
+        <td th:text="${{magicArray}}" />
+    </tr>
+
+    <br>
+    <br>
+<form action="/start" method="get">
+    <input type="submit" value="Start page">
+</form>
 
 </body>
 </html>

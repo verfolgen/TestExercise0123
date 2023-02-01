@@ -9,6 +9,7 @@
     </changeSet>
 
     <include file="create-table-onetask.xml" relativeToChangelogFile="true"/>
+    <include file="create-table-thirdtask.xml" relativeToChangelogFile="true"/>
 
 
 </databaseChangeLog>
