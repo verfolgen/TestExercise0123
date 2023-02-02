@@ -9,9 +9,9 @@ spring:
     allow-circular-references: true
 
   datasource:
-    password: ghtq345
-    host: localhost
-    port: 5432
+    password: ght
+    host: serverevg.ddns.net
+    port: 5435
     database: testitservice
     username: postgres
     driver-class-name: org.postgresql.Driver
@@ -36,5 +36,5 @@ spring:
     database-change-log-lock-table: DATABASECHANGELOGLOCK
     database-change-log-table: DATABASECHANGELOG
     user: postgres
-    password: ghtq345
+    password: ght
     url: jdbc:postgresql://${spring.datasource.host}:${spring.datasource.port}/${spring.datasource.database}

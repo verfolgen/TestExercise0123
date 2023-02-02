@@ -118,7 +118,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>2.7.0</version>
                 <configuration>
-                    <mainClass>org.sbitnev.org.sbitnev.MainApplication</mainClass>
+                    <mainClass>org.sbitnev.MainApplication</mainClass>
                 </configuration>
                 <executions>
                     <execution>

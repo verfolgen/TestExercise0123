@@ -1,0 +1,13 @@
+services:
+  db:
+    image: postgres:alpine
+    container_name: dbtest0223
+    environment:
+      POSTGRES_DB: testitservice
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: ght
+    ports:
+      - '5435:5432'
+    volumes:
+      - '/server/postgres:/var/lib/postgresql/data'
+
