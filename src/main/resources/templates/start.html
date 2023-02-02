@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset = "UTF-8" />
+    <title>Test</title>
+</head>
+<body>
+    <h1>Welcome to application</h1>
+    <h1>First task</h1>
+    <form action="/calculate_one" method="post">
+        <label for="initialArray">First Array</label>
+        <input  id="initialArray" type="text" name="initialArray">
+
+        <label for="array">Second Array</label>
+        <input  id="array" type="text" name="array">
+
+        <input type="submit" value="Calculate">
+        <input type="submit" value="Save" formaction="/save_one">
+        <input type="submit" value="Export" formaction="/export_one" formmethod="get">
+        <input type="submit" value="Download" formaction="/download_one" formmethod="get">
+    </form>
+    <ul th:each="n : ${resultArray}">
+        <li th:text = "${n}"></li>
+    </ul>
+
+    <h1 th:each="n : ${resultArray}"></h1>
+
+    <h1>Third task</h1>
+    <form action="/calculate_three" method="post">
+        <label for="one">1</label>
+        <input   id="one" type="text" name="one" size="1">
+
+        <label for="two">2</label>
+        <input  id="two" type="text" name="two" size="1">
+
+        <label for="three">3</label>
+        <input  id="three" type="text" name="three" size="1">
+        <br>
+        <br>
+
+        <label for="four">4</label>
+        <input  id="four" type="text" name="four" size="1">
+
+        <label for="five">5</label>
+        <input  id="five" type="text" name="five" size="1">
+
+        <label for="six">6</label>
+        <input  id="six" type="text" name="six" size="1">
+        <br>
+        <br>
+
+        <label for="seven">7</label>
+        <input  id="seven" type="text" name="seven" size="1">
+
+        <label for="eight">8</label>
+        <input  id="eight" type="text" name="eight" size="1">
+
+        <label for="nine">9</label>
+        <input  id="nine" type="text" name="nine" size="1">
+
+        <input type="submit" value="Calculate">
+        <input type="submit" value="Save" formaction="/save_three">
+        <input type="submit" value="Export" formaction="/export_three" formmethod="get">
+        <input type="submit" value="Download" formaction="/download_three" formmethod="get">
+    </form>
+
+    <br>
+
+    <tr th:each="thirdTask: ${thirdTasks}">
+        <td th:text = "Cost-"></td>
+        <td th:text="${{thirdTask.cost}}" />
+    </tr>
+
+    <br>
+
+    <tr th:each="magicArray: ${magicArrays}">
+        <td th:text="${{magicArray}}" />
+    </tr>
+
+    <br>
+    <br>
+<form action="/start" method="get">
+    <input type="submit" value="Start page">
+</form>
+
+</body>
+</html>
